@@ -6,9 +6,9 @@ function Nav({ isOpen, setOpen, activeID, setActiveID }) {
   // const handleNavToggle = () => setOpen(!isOpen);
 
   return (
-    <div className="w-full flex flex-row justify-between z-20 border-b-1 border-black">
+    <div className="w-full flex flex-row justify-between z-20 border-b">
       {activeID > 0 && !isOpen && (
-        <h2 className="m-3 ml-6 text-xl font-thin julius-sans-one-regular cursor-default"
+        <h2 className="m-3 ml-6 text-xl font-thin julius-sans-one-regular cursor-default z-20"
         onClick={() => setActiveID(0)}>
           possum park studio
         </h2>

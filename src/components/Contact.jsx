@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import useWeb3Forms from "@web3forms/react";
+import brushy from "../assets/brushtailpossum.png";
 
 const Contact = () => {
   const { register, reset, handleSubmit } = useForm();
@@ -34,7 +35,7 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-center">
       {!isSuccess && (
         <form
-          className="flex flex-col space-y-4 my-2  p-4 font-thin text-lg w-4/5 max-w-md"
+          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-4/5 max-w-md"
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
@@ -65,10 +66,13 @@ const Contact = () => {
         </form>
       )}
 
-      <div className="py-24 text-red-500">
-        {result}
-        {
+{
           isSuccess &&
+      <div className="flex flex-col items-center my-8">
+        <h2 className="text-2xl p-2 rounded my-8 text-gray-500 border-gray-400 border">
+        {result}
+        </h2>
+
           <div className="flex pt-6">
             <motion.div
               animate={{
@@ -77,13 +81,13 @@ const Contact = () => {
               }}
               transition={{
                 duration: 2,
-                // ease: "easeInOut",
+                ease: "easeInOut",
                 times: [0, 0.2, 0.5, 0.8, 1],
                 repeat: Infinity,
               }}
               className="text-center p-2"
             >
-              🥳
+              <img className="w-7" src={brushy} alt="" />
             </motion.div>
             <motion.div
               animate={{
@@ -93,32 +97,31 @@ const Contact = () => {
               transition={{
                 duration: 3,
                 ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.7, .9],
+                times: [0, 0.2, 0.5, 0.7, 0.9],
                 repeat: Infinity,
               }}
               className="text-center p-2"
             >
-              🥳
+              <img className="w-9" src={brushy} alt="" />
             </motion.div>
             <motion.div
               animate={{
-                rotate: [0, 0, 40, -40, 0],
-                y: [0, -20, -5, -10, 0],
+                rotate: [0, 0, -10, 40, 0],
+                y: [0, -10, -5, -15, 0],
               }}
               transition={{
-                duration: 1.5,
-                ease: "easeInOut",
-                times: [0, 0.3, 0.5, 0.6, .8],
+                duration: 2.8,
+                // ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
                 repeat: Infinity,
               }}
               className="text-center p-2"
             >
-              🥳
+              <img className="w-8" src={brushy} alt="" />
             </motion.div>
-
+          </div>
           </div>
         }
-      </div>
     </div>
   );
 };

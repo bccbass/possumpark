@@ -12,15 +12,17 @@ function App() {
 
   return (
     <>
-      <Nav
-        isOpen={isOpen}
-        setOpen={setOpen}
-        activeID={activeID}
-        setActiveID={setActiveID}
-      />
-      <Body activeID={activeID} />
-      <ArrowNav activeID={activeID} setActiveID={setActiveID} />
-      <Footer />
+      <main className="flex flex-col min-h-screen justify-between h-fit">
+        <Nav
+          isOpen={isOpen}
+          setOpen={setOpen}
+          activeID={activeID}
+          setActiveID={setActiveID}
+        />
+        <Body activeID={activeID} />
+        <ArrowNav activeID={activeID} setActiveID={setActiveID} />
+        <Footer />
+      </main>
     </>
   );
 }
