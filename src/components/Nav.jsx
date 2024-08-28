@@ -27,7 +27,7 @@ function Nav({ isOpen, setOpen, activeID, setActiveID }) {
           color={isOpen ? "white" : "#A9A9A9"}
         />
       </div>
-      {isOpen && <Menu setOpen={ setOpen } setActiveID={setActiveID} />}
+      {isOpen && <Menu setOpen={ setOpen } setActiveID={setActiveID} activeID={activeID} />}
     </div>
   );
 }
