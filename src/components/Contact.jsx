@@ -35,23 +35,23 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-center">
       {!isSuccess && (
         <form
-          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-4/5 max-w-md"
+          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-4/5 max-w-md "
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
-            className="border border-gray-400 rounded p-1"
+            className="border border-gray-400 rounded p-1 bg-neutral-50"
             placeholder="name"
             type="text"
             {...register("name", { required: true })}
           />
           <input
-            className="border border-gray-400 rounded p-1"
+            className="border border-gray-400 rounded p-1 bg-neutral-50"
             placeholder="email"
             type="email"
             {...register(" email", { required: true })}
           />
           <textarea
-            className="border border-gray-400 rounded p-1"
+            className="border border-gray-400 rounded p-1 bg-neutral-50"
             placeholder="type your message"
             rows="3"
             {...register("message", { required: true })}

@@ -3,16 +3,18 @@ const cloudinaryPrefix = 'https://res.cloudinary.com/dyb9ascpy/image/upload/v172
 const workContents = [
     {
         title: 'LoFi Mock Commercial',
-        URL: 'G2lEGMf_j4k',
-        img: cloudinaryPrefix + 'possumpark/videoThumbnails/ohky8trk3mccyxjfhjjn',
-        role: 'composer, instrumentalist, mixing, visuals'
-
+        videoID: 'lofi',
+        img: cloudinaryPrefix + 'possumpark/video/lofithumb',
+        role: 'composer, instrumentalist, mixing, visuals',
+        tags: ['lofi', 'composer', 'commercial', 'chill']
     },
     {
         title: 'Afropop Mock Commercial',
-        URL: 'tcpXHngCi4M',
-        img: cloudinaryPrefix + 'possumpark/videoThumbnails/ifxte6h52d4o0cpzdy8m',
-        role: 'composer, instrumentalist, mixing, visuals'
+        videoID: 'afropop',
+        img: cloudinaryPrefix + 'possumpark/video/afropopthumb',
+        role: 'composer, instrumentalist, mixing, visuals',
+        tags: ['energetic', 'composer', 'commercial', 'world']
+
     }
 ]
 

@@ -1,38 +1,45 @@
 import React from "react";
 import { useState } from "react";
+import VideoPlayer from "./VideoPlayer";
+import tagInfo from "../assets/tagInfo";
 
 const WorkCard = ({ project }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
-    <div className="m-5 border border-gray-300 flex flex-col items-center p-6 rounded-sm rounded-t-2xl shadow-lg bg-gray-200">
-      {/* <span>{"https://www.youtube.com/" + project.URL}</span> */}
-      <div className="full rounded-xl">
+    <div className="m-5 border border-gray-200 flex flex-col items-center p-6 rounded-sm rounded-t-2xl shadow-lg bg-neutral-100">
+      <div className="">
         {!isPlaying ? (
           <img
             onClick={() => setIsPlaying(true)}
-            className="py-2 bg-black rounded-t-xl"
+            className="rounded"
             src={project.img}
             alt=""
           />
         ) : (
-          <iframe
-          className=" rounded-t-xl"
-
-            width="100%"
-            height=""
-            src={`https://www.youtube.com/embed/${project.URL}?si=fLLR64n5W_OiUv5y`}
-            title="YouTube video player"
-            frameborder="0"
-            autoPlay
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+          <div className="rounded-lg overflow-hidden">
+            <VideoPlayer videoID={project.videoID} />
+          </div>
         )}
       </div>
-      <div className="w-full">
-      <h2 className="font-light"><span className="font-semibold"> project: </span>{project.title}</h2>
-      <h2 className="font-light"> <span className="font-semibold"> role: </span>{project.role}</h2>
+      <div className="w-full flex flex-col space-y-2 my-2">
+        <h2 className="font-light">
+          <span className="font-semibold"> project: </span>
+          {project.title}
+        </h2>
+        <h2 className="font-light">
+          <span className="font-semibold"> role: </span>
+          {project.role}
+        </h2>
+        <div className="flex flex-wrap space-y-1 space-x-1">
+          <h2 className="font-semibold">tags:</h2>
+          {project.tags.map((tag) => (
+            <span
+              className={`rounded-sm font-normal px-1 py-0 uppercase text-sm text-white ${tagInfo[tag]}`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

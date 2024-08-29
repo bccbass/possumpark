@@ -18,7 +18,7 @@ const Menu = ({ setOpen, setActiveID, activeID }) => {
       <div className="flex flex-col items-center justify-between h-1/2 my-20 text-3xl text-slate-100 font-light">
         {sectionContents.map((section) => (
           <span
-            className={activeID == section.ID && "underline font-normal"}
+            className={activeID == section.ID && "underline underline-offset-8"}
             onClick={() => handleSetActiveID(section.ID)}
           >
             {section.menuTitle}
