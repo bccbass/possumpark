@@ -1,16 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import VideoPlayer from "./VideoPlayer";
-import tagInfo from "../assets/tagInfo";
+import Tags from "./Tags";
 
-const WorkCard = ({ project }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
   return (
     <div className="m-5 border border-gray-200 flex flex-col items-center p-6 rounded-sm rounded-t-2xl shadow-lg bg-neutral-100">
       <div className="">
-        {!isPlaying ? (
+        {isPlaying != project.videoID? (
           <img
-            onClick={() => setIsPlaying(true)}
+            onClick={() => setIsPlaying(project.videoID)}
             className="rounded"
             src={project.img}
             alt=""
@@ -30,16 +29,7 @@ const WorkCard = ({ project }) => {
           <span className="font-semibold"> role: </span>
           {project.role}
         </h2>
-        <div className="flex flex-wrap space-y-1 space-x-1">
-          <h2 className="font-semibold">tags:</h2>
-          {project.tags.map((tag) => (
-            <span
-              className={`rounded-sm font-normal px-1 py-0 uppercase text-sm text-white ${tagInfo[tag]}`}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        < Tags tags={project.tags} />
       </div>
     </div>
   );

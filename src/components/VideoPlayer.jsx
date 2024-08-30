@@ -14,12 +14,22 @@ const VideoPlayer = ({videoID}) => {
             cloud_name: 'dyb9ascpy',
             secure: true,
             controls: true,
+            f_auto: 'video',
+            autoplay: true,
+            // height: "300",
+            width: "300"
+            // transformation: {width: 'auto'}
         } );
     }, [])
   return (
     < video 
+    // className="absolute object-cover w-100 h-full top-0 left-0"
+
         ref={ videoRef }
         data-cld-public-id={"possumpark/video/" + videoID}
+        width={"auto"}
+        height={"auto"}
+        
     />
   )
 }

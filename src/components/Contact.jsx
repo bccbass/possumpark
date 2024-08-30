@@ -6,6 +6,7 @@ import useWeb3Forms from "@web3forms/react";
 import brushy from "../assets/brushtailpossum.png";
 
 const Contact = () => {
+  const inputClassStyle = 'border border-gray-400 rounded p-1 bg-white'
   const { register, reset, handleSubmit } = useForm();
 
   const [isSuccess, setIsSuccess] = useState(false);
@@ -32,33 +33,33 @@ const Contact = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center bg-neutral-50">
       {!isSuccess && (
         <form
           className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-4/5 max-w-md "
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
-            className="border border-gray-400 rounded p-1 bg-neutral-50"
+            className={inputClassStyle} 
             placeholder="name"
             type="text"
             {...register("name", { required: true })}
           />
           <input
-            className="border border-gray-400 rounded p-1 bg-neutral-50"
+            className={inputClassStyle} 
             placeholder="email"
             type="email"
             {...register(" email", { required: true })}
           />
           <textarea
-            className="border border-gray-400 rounded p-1 bg-neutral-50"
+            className={inputClassStyle} 
             placeholder="type your message"
             rows="3"
             {...register("message", { required: true })}
           ></textarea>
 
           <button
-            className="self-end  text-gray-600 border-gray-200 rounded px-2 border hover:bg-red-400 hover:text-white transition-colors"
+            className="self-end bg-white text-gray-600 border-gray-200 rounded px-2 border hover:bg-red-400 hover:text-white transition-colors"
             type="submit"
           >
             Send Message
