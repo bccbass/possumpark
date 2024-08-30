@@ -9,7 +9,7 @@ const VidPlayer = ({project, activeProject}) => {
       setIsPlaying(project.videoID)
       vidRef.current.play()
     }
-  // const handleClick = () => setIsPlaying(project.videoID);
+  const handleClick = () => setIsPlaying(project.videoID);
 
   return (
     <div className="">
@@ -18,13 +18,13 @@ const VidPlayer = ({project, activeProject}) => {
           <div className="w-full">
                 <video
                 ref={vidRef}
-                // onClick={handlePlayVideo}
+                onClick={handleClick}
     className="w-full"
     height={"100%"}
     width={"100%"}
     // autoPlay={isPlaying}
 
-    controls
+    controls={isPlaying}
     poster={project.img}
     playsInline
     src={`https://res.cloudinary.com/dyb9ascpy/video/upload/v1724886027/possumpark/video/${project.videoID}.mov`}
