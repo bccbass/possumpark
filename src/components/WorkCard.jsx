@@ -5,7 +5,7 @@ import Tags from "./Tags";
 
 const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
   return (
-    <div className="m-5 border border-gray-200 flex flex-col items-center p-6 rounded-sm rounded-t-2xl shadow-lg bg-neutral-100">
+    <div className="border border-gray-200 flex flex-col items-center p-6 rounded-lg shadow-lg bg-neutral-100 w-full">
       <div className="">
         {isPlaying != project.videoID? (
           <img

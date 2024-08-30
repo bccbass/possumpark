@@ -8,7 +8,7 @@ const Work = () => {
   const [isPlaying, setIsPlaying] = useState(null);
 
   return (
-    <div className='bg-neutral-50'>
+    <div className='flex flex-wrap space-y-4'>
         {
             workContents.map(project => < WorkCard project={project} isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>)
         }

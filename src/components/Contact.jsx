@@ -33,7 +33,7 @@ const Contact = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center bg-neutral-50">
+    <div className="flex flex-col items-center justify-center bg-neutral-50 border w-full">
       {!isSuccess && (
         <form
           className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-4/5 max-w-md "
