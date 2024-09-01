@@ -6,7 +6,6 @@ import workContents from '../assets/workContents.js'
 
 const Work = () => {
   const [isPlaying, setIsPlaying] = useState(null);
-  // const playingRef = useRef(null)
 
   return (
     <div className='flex flex-wrap space-y-4'>

@@ -3,12 +3,11 @@ import { useState } from "react";
 import VidPlayer from "./VidPlayer";
 import Tags from "./Tags";
 
-const WorkCard = ({ project}) => {
-  const [ activeProject, setActiveProject ] = useState(null)
+const WorkCard = ({ project, isPlaying, setIsPlaying}) => {
   return (
     <div className="border border-gray-200 flex flex-col items-center p-3.5 rounded-lg shadow-lg bg-neutral-100 w-full">
-      <div onClick={() => setActiveProject(project.videoID)}>
-      < VidPlayer project={project} activeProject={activeProject} />
+      <div>
+      < VidPlayer project={project}  isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
       </div>      
 
       <div className="w-full flex flex-col space-y-2 my-2">
