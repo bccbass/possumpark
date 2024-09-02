@@ -15,8 +15,9 @@ const Body = ({ activeID }) => {
           (section) =>
             section.ID == activeID && (
               <Section key={section.ID} section={section}>
-                {section.ID == 2 && <Work />}
-                {section.ID == 4 && <Contact />}
+                {section.menuTitle == "work" && <Work />}
+                {section.menuTitle == "contact" && <Contact />}
+                
               </Section>
             )
         )}

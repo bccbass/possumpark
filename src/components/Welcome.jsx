@@ -1,5 +1,5 @@
 import React from "react";
-import possum from "../assets/madpossum.jpg";
+import possum from "../assets/madpossumv2.png";
 
 function Welcome() {
   return (

@@ -36,7 +36,7 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-center bg-neutral-50 border w-full">
       {!isSuccess && (
         <form
-          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-4/5 max-w-md "
+          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-full max-w-md "
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
@@ -59,7 +59,7 @@ const Contact = () => {
           ></textarea>
 
           <button
-            className="ring-1 ring-red-500 hover:ring-red-100 self-end bg-white text-gray-600 border-gray-200 rounded px-2 border hover:bg-red-400 hover:text-white transition-colors"
+            className="ring-1 ring-red-500 text-red-500 hover:ring-red-100 self-end bg-white text-gray-600 border-gray-200 rounded px-2 border hover:bg-red-400 hover:text-white transition-colors"
             type="submit"
           >
             Send Message
