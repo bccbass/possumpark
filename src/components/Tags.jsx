@@ -3,7 +3,7 @@ import tagInfo from '../assets/tagInfo.js'
 
 const Tags = ({tags}) => {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap py-2 px-1">
     {tags.map((tag) => (
       <span
         className={`rounded-sm font-normal px-1 py-0  my-0.5 mx-1 uppercase text-xs text-white  ${tagInfo[tag]}`}

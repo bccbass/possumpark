@@ -1,7 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import VidPlayer from "./VidPlayer";
-import Tags from "./Tags";
+import WorkCardInfo from "./WorkCardInfo";
 
 const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
   return (
@@ -9,25 +9,24 @@ const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
       <h2 className="julius-sans-one-regular bg-cyan-900 w-full text-neutral-50 rounded-t-sm p-1.5">
         project: {project.title}
       </h2>
-      <div className="">
+      <div className="z-20">
         <VidPlayer
           project={project}
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
         />
       </div>
-
-      <div className="w-full flex flex-col space-y-2 py-2 px-1.5">
-        <article className="font-light">
-          <span className="font-semibold"> Description: </span>
-          {project.description}
-        </article>
-        <h2 className="font-light">
-          <span className="font-semibold"> Role: </span>
-          {project.role}
-        </h2>
-        {/* <Tags tags={project.tags} /> */}
-      </div>
+      <AnimatePresence>
+        {project.videoID === isPlaying && (
+          <motion.div
+          className="z-0 flex justify-center items-center"
+          initial={{height: '0px'}}
+          animate={{ height: '115px' }}
+          exit={{ height: '0px' }}>
+          <WorkCardInfo isPlaying={isPlaying} project={project} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

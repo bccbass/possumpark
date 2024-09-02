@@ -2,19 +2,16 @@ import React from "react";
 import { useState, useRef, useEffect } from "react";
 
 const VidPlayer = ({ project, isPlaying, setIsPlaying }) => {
-  const [isLoading, setIsLoading] = useState(false)
-  const vidRef = useRef(null);
 
-  
   return (
     <div className="">
       {
-        <div className="w-full h-1/2">
+        <div className="w-full ">
           {isPlaying == project.videoID ? (
-            <React.Suspense fallback={<h1 className="h-24 w-full bg-red-300">loading...</h1>}>
+            <div>
               <video
-                ref={vidRef}
-                className="w-full"
+                className="w-full relative top-0 left-0 z-20"
+                // style={{transform: 'translate(0px, -1px)'}}
                 height={"100%"}
                 width={"100%"}
                 autoPlay
@@ -24,15 +21,15 @@ const VidPlayer = ({ project, isPlaying, setIsPlaying }) => {
                 src={project.videoID}
                 type="video/mp4"
               ></video>
-            </React.Suspense>
+            </div>
           ) : (
-            <React.Suspense fallback={<h1 className="h-24 w-full bg-red-300">loading...</h1>}>
+            <div className="z-20">
             <img
               onClick={() => setIsPlaying(project.videoID)}
               src={project.img}
               alt={project.title}
             />
-            </React.Suspense>
+            </div>
           )}
         </div>
       }

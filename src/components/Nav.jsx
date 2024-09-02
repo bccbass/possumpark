@@ -6,7 +6,7 @@ function Nav({ isOpen, setOpen, activeID, setActiveID }) {
   // const handleNavToggle = () => setOpen(!isOpen);
 
   return (
-    <div className="w-full flex flex-row justify-between z-20 border-b">
+    <div className="w-full flex flex-row justify-between z-20 border-b bg-white">
       {activeID > 0 && !isOpen && (
         <h2 className="m-3 ml-6 text-xl font-thin julius-sans-one-regular cursor-default z-20"
         onClick={() => setActiveID(0)}>
