@@ -1,9 +1,16 @@
 import React from "react";
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Section = ({ section, children }) => {
+  const sectionRef = useRef(null);
+  useEffect(()=>{
+    sectionRef.current.scrollIntoView()
+  }, [])
+
   return (
     <motion.div
+      ref={sectionRef}
       initial={{ opacity: 0 }}
       animate={{ x: 0, opacity: 100 }}
       exit={{ opacity: 0 }}

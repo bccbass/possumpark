@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // npm install react-hook-form @web3forms/react
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import useWeb3Forms from "@web3forms/react";
 import brushy from "../assets/brushtailpossum.png";
+import possum from "../assets/madpossumv2.png"
 
 const Contact = () => {
   const inputClassStyle = 'border border-gray-400 rounded p-1 bg-white'
@@ -70,12 +71,10 @@ const Contact = () => {
 {
           isSuccess &&
       <div className="flex flex-col items-center my-8">
-        <h2 className="text-2xl p-2 rounded my-8 text-gray-500 border-gray-400 border">
-        {result}
-        </h2>
+    
 
           <div className="flex pt-6">
-            <motion.div
+            {/* <motion.div
               animate={{
                 rotate: [0, 0, 40, -40, 0],
                 y: [0, -20, -5, -10, 0],
@@ -88,12 +87,13 @@ const Contact = () => {
               }}
               className="text-center p-2"
             >
-              <img className="w-7" src={brushy} alt="" />
-            </motion.div>
+              <img className="w-12" src={possum} alt="" />
+            </motion.div> */}
             <motion.div
               animate={{
-                rotate: [0, 0, 40, -40, 0],
+                rotate: [0, 0, 30, -30, 0],
                 y: [0, -20, -5, -10, 0],
+                x: [2, -2, -5, -10, 2],
               }}
               transition={{
                 duration: 3,
@@ -101,11 +101,11 @@ const Contact = () => {
                 times: [0, 0.2, 0.5, 0.7, 0.9],
                 repeat: Infinity,
               }}
-              className="text-center p-2"
+              className="text-center mt-4"
             >
-              <img className="w-9" src={brushy} alt="" />
+              <img className="w-14" src={possum} alt="" />
             </motion.div>
-            <motion.div
+            {/* <motion.div
               animate={{
                 rotate: [0, 0, -10, 40, 0],
                 y: [0, -10, -5, -15, 0],
@@ -118,9 +118,12 @@ const Contact = () => {
               }}
               className="text-center p-2"
             >
-              <img className="w-8" src={brushy} alt="" />
-            </motion.div>
+              <img className="w-14 rotate-12" src={possum} alt="" />
+            </motion.div> */}
           </div>
+          <h2 className="text-2xl p-2 rounded mb-16 text-gray-500 border-gray-400 border">
+        {result}
+        </h2>
           </div>
         }
     </div>
