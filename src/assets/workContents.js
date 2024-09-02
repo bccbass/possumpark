@@ -13,7 +13,7 @@ const workContents = [
   },
   {
     title: "Innovation In a Minute",
-    videoID: "afropop",
+    videoID: `${videoPrefix}afropop.mov`,
     img: cloudinaryPrefix + "afropopthumb",
     role: "composer, instrumentalist, mixing, visuals",
     description: "Commercial brief",
@@ -22,7 +22,7 @@ const workContents = [
   },
   {
     title: "Amazing in Motion",
-    videoID: "indie",
+    videoID: `${videoPrefix}indie.mov`,
     img: cloudinaryPrefix + "indiethumb",
     role: "composer, instrumentalist, mixing, visuals",
     description: "Commercial brief",
