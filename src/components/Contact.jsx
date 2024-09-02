@@ -59,7 +59,7 @@ const Contact = () => {
           ></textarea>
 
           <button
-            className="ring-1 ring-red-500 text-red-500 hover:ring-red-100 self-end bg-white text-gray-600 border-gray-200 rounded px-2 border hover:bg-red-400 hover:text-white transition-colors"
+            className="ring-1 ring-red-300  ring-offset-2 hover:ring-red-100 self-end bg-white border-red-500 rounded px-2 border hover:bg-red-400 hover:text-white transition-colors"
             type="submit"
           >
             Send Message

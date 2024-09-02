@@ -5,7 +5,7 @@ import Tags from "./Tags";
 
 const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
   return (
-    <div className=" flex flex-col items-center drop-shadow-xl mb-4 bg-white w-full max-w-lg">
+    <div className=" flex flex-col items-center shadow-xl mb-4 bg-white w-full max-w-lg">
       <h2 className="julius-sans-one-regular bg-cyan-900 w-full text-neutral-50 rounded-t-sm p-1.5">
         project: {project.title}
       </h2>

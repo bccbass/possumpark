@@ -21,7 +21,7 @@ const VidPlayer = ({ project, isPlaying, setIsPlaying }) => {
                 controls
                 poster={project.img}
                 playsInline
-                src={`https://res.cloudinary.com/dyb9ascpy/video/upload/v1724886027/possumpark/video/${project.videoID}.mov`}
+                src={project.videoID}
                 type="video/mp4"
               ></video>
             </React.Suspense>
