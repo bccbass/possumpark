@@ -24,7 +24,8 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
               onClick={activeID != 0 ? handleDecrementId : null}
               className={activeID != 0 ? activeButton : inactiveButton}
               src={leftArrow}
-              alt=""
+              alt="left arrow"
+              draggable="false"
             />
 
           {/* Right Arrow */}
@@ -33,14 +34,17 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
               onClick={activeID != contentLength ? handleIncrementId : null}
               className={activeID != contentLength ? activeButton : inactiveButton}
               src={rightArrow}
-              alt=""
+              alt="right arrow"
+              draggable="false"
             />
         </div>
         {/* DOTS */}
         <div className="flex mt-2">
           {sectionContents.map((section, i) => (
             <img
+              onClick={() => setActiveID(i)}
               className="w-4 opacity-90 mx-1 "
+              draggable="false"
               src={activeID === i ? redDot : dot}
             ></img>
           ))}

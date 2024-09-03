@@ -47,10 +47,19 @@ const workContents = [
   },
   {
     title: "New York Lonely Boy",
-    videoID: "https://www.youtube.com/embed/n6naKHbmwgE",
-    img: cloudinaryPrefix + "girls5evathumb",
+    videoID: `${videoPrefix}lonelyboy.mov`,
+    img: cloudinaryPrefix + "lonelyboythumb",
     role: "upright bass, engineer",
-    description: "Song from TV show Girls5Eva, featuring the Milk Carton Kids",
+    description: "Song from season 1 Girls5Eva, featuring the Milk Carton Kids",
+
+    tags: ["television", "commercial", "indie"],
+  },
+  {
+    title: "New York Moms",
+    videoID: `${videoPrefix}moms.mov`,
+    img: cloudinaryPrefix + "momsthumb",
+    role: "upright bass, engineer",
+    description: "Song from season 2 of Girls5Eva, featuring Ingrid Michaelson",
 
     tags: ["television", "commercial", "indie"],
   },

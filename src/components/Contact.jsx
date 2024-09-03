@@ -3,11 +3,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import useWeb3Forms from "@web3forms/react";
-import brushy from "../assets/brushtailpossum.png";
-import possum from "../assets/madpossumv2.png"
+import possum from "../assets/madpossumv2.png";
 
 const Contact = () => {
-  const inputClassStyle = 'border border-gray-400 rounded p-1 bg-white'
+  const inputClassStyle = "border border-gray-400 rounded p-1 bg-white";
   const { register, reset, handleSubmit } = useForm();
 
   const [isSuccess, setIsSuccess] = useState(false);
@@ -34,26 +33,26 @@ const Contact = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center bg-neutral-50 border w-full">
+    <div className="flex flex-col items-center justify-center h-54 bg-neutral-50 border w-full max-w-lg mb-12">
       {!isSuccess && (
         <form
           className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-full max-w-md "
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
-            className={inputClassStyle} 
+            className={inputClassStyle}
             placeholder="name"
             type="text"
             {...register("name", { required: true })}
           />
           <input
-            className={inputClassStyle} 
+            className={inputClassStyle}
             placeholder="email"
             type="email"
             {...register(" email", { required: true })}
           />
           <textarea
-            className={inputClassStyle} 
+            className={inputClassStyle}
             placeholder="type your message"
             rows="3"
             {...register("message", { required: true })}
@@ -68,27 +67,23 @@ const Contact = () => {
         </form>
       )}
 
-{
-          isSuccess &&
-      <div className="flex flex-col items-center my-8">
-    
-
+      {
+        isSuccess &&
+        <motion.div
+          
+          animate={{
+            scale: [0, 1, 1, .95, 1],
+            borderRadius: ["100%", "0%", "0%", "0%", "0%"]
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.2, 0.5, 0.8, 1],
+            repeatDelay: 1
+          }}
+          className="flex flex-col items-center  w-full h-full bg-red-500 "
+        >
           <div className="flex pt-6">
-            {/* <motion.div
-              animate={{
-                rotate: [0, 0, 40, -40, 0],
-                y: [0, -20, -5, -10, 0],
-              }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-                repeat: Infinity,
-              }}
-              className="text-center p-2"
-            >
-              <img className="w-12" src={possum} alt="" />
-            </motion.div> */}
             <motion.div
               animate={{
                 rotate: [0, 0, 30, -30, 0],
@@ -105,27 +100,12 @@ const Contact = () => {
             >
               <img className="w-14" src={possum} alt="" />
             </motion.div>
-            {/* <motion.div
-              animate={{
-                rotate: [0, 0, -10, 40, 0],
-                y: [0, -10, -5, -15, 0],
-              }}
-              transition={{
-                duration: 2.8,
-                // ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-                repeat: Infinity,
-              }}
-              className="text-center p-2"
-            >
-              <img className="w-14 rotate-12" src={possum} alt="" />
-            </motion.div> */}
           </div>
-          <h2 className="text-2xl p-2 rounded mb-16 text-gray-500 border-gray-400 border">
-        {result}
-        </h2>
-          </div>
-        }
+          <h2 className="text-2xl p-2 mb-16 text-neutral-100 julius-sans-one-regular">
+            {result}
+          </h2>
+        </motion.div>
+      }
     </div>
   );
 };
