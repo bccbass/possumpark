@@ -17,12 +17,12 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
 
   return (
     !isOpen && (
-      <div className="flex flex-col items-center  mt-6 mb-8">
-        <div className="flex flex-row w-full items-center justify-center ">
+      <div className="flex flex-col items-center  mt-2 mb-8">
+        <div className="">
             <img
               label="toPreviousSection"
               onClick={activeID != 0 ? handleDecrementId : null}
-              className={activeID != 0 ? activeButton : inactiveButton}
+              className={`${activeID != 0 ? activeButton : inactiveButton} fixed left-6 top-1/2`}
               src={leftArrow}
               alt="left arrow"
               draggable="false"
@@ -32,7 +32,7 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
             <img
               label="toNextSection"
               onClick={activeID != contentLength ? handleIncrementId : null}
-              className={activeID != contentLength ? activeButton : inactiveButton}
+              className={`${activeID != contentLength ? activeButton : inactiveButton} fixed right-6 top-1/2`}
               src={rightArrow}
               alt="right arrow"
               draggable="false"

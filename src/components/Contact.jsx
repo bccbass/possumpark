@@ -81,7 +81,7 @@ const Contact = () => {
             times: [0, 0.2, 0.5, 0.8, 1],
             repeatDelay: 1
           }}
-          className="flex flex-col items-center  w-full h-full bg-red-500 "
+          className="flex flex-col items-center  w-full h-full bg-red-500 py-16 "
         >
           <div className="flex pt-6">
             <motion.div

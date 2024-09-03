@@ -63,6 +63,42 @@ const workContents = [
 
     tags: ["television", "commercial", "indie"],
   },
+  {
+    title: "Drunkards Walk Pt. 1",
+    videoID: `${videoPrefix}drunkards.mov`,
+    img: cloudinaryPrefix + "drunkardsthumb",
+    role: "upright bass, production",
+    description: "Assembly Trio (ft. Aaron Arntz, Christopher Bear) from album Russell St. Recordings",
+
+    tags: ["television", "commercial", "indie"],
+  },
+  {
+    title: "Doing",
+    videoID: `${videoPrefix}doing.mov`,
+    img: cloudinaryPrefix + "doingthumb",
+    role: "production, composer, instrumentalist, visuals",
+    description: "Doing from album Kimono Dragon",
+
+    tags: ["television", "commercial", "indie"],
+  },
+  {
+    title: "O B F O L G B",
+    videoID: `${videoPrefix}obfolgb.mov`,
+    img: cloudinaryPrefix + "obfolgbthumb",
+    role: "production, composer, instrumentalist, visuals",
+    description: "O B F O L G B from album Kimono Dragon",
+
+    tags: ["television", "commercial", "indie"],
+  },
+  {
+    title: "Two Feet",
+    videoID: `${videoPrefix}twofeet.mov`,
+    img: cloudinaryPrefix + "twofeetthumb",
+    role: "production, composer, instrumentalist",
+    description: "Inspired by the western works of Cormac McCarthy",
+
+    tags: ["television", "commercial", "indie"],
+  },
 ];
 
 export default workContents;
