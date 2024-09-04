@@ -24,7 +24,7 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
             onClick={activeID != 0 ? handleDecrementId : null}
             className={`${
               activeID != 0 ? activeButton : inactiveButton
-            } md:fixed left-1 lg:left-12 xl:left-48 2xl:left-80 md:top-1/2 invert`}
+            } md:fixed left-1 lg:left-12 xl:left-48 md:top-1/2`}
             src={leftArrow}
             alt="left arrow"
             draggable="false"
@@ -36,7 +36,7 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
             onClick={activeID != contentLength ? handleIncrementId : null}
             className={`${
               activeID != contentLength ? activeButton : inactiveButton
-            } md:fixed right-1 lg:right-12 xl:right-48 2xl:right-80 md:top-1/2 invert`}
+            } md:fixed right-1 lg:right-12 xl:right-48 md:top-1/2`}
             src={rightArrow}
             alt="right arrow"
             draggable="false"
@@ -47,7 +47,7 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
           {sectionContents.map((section, i) => (
             <img
               onClick={() => setActiveID(i)}
-              className={`w-4 opacity-90 mx-1 ${activeID === i ? '' : 'invert'}`}
+              className={`w-4 opacity-90 mx-1`}
               draggable="false"
               src={activeID === i ? redDot : dot}
             ></img>
