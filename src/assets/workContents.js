@@ -96,8 +96,8 @@ const workContents = [
   },
   {
     title: "Escape to Mañana",
-    videoID: `${videoPrefix}escape.mov`,
-    img: cloudinaryPrefix + "escapethumb",
+    videoID: `${videoPrefix}manana.mov`,
+    img: cloudinaryPrefix + "mananathumb",
     role: "production, composer, instrumentalist",
     description: "Escape to Mañana from album Kimono Dragon",
     tags: ["television", "commercial", "indie"],

@@ -33,10 +33,10 @@ const Contact = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center h-54 bg-neutral-50 border w-full max-w-lg mb-12">
+    <div className="flex flex-col items-center justify-center h-54 bg-neutral-50 border w-full max-w-xl mb-12">
       {!isSuccess && (
         <form
-          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-full max-w-md "
+          className="flex flex-col space-y-4 my-2 p-4 font-thin text-lg w-full max-w-lg "
           onSubmit={handleSubmit(onSubmit)}
         >
           <input

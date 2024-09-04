@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <main className="flex flex-col min-h-screen justify-between h-fit">
+      <main className="flex flex-col min-h-screen justify-between h-fit bg-teal-900">
         <Nav
           isOpen={isOpen}
           setOpen={setOpen}

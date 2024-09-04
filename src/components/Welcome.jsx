@@ -3,7 +3,7 @@ import possum from "../assets/madpossumv2.png";
 
 function Welcome() {
   return (
-    <div className="my-8 flex flex-col justify-center items-center julius-sans-one-regular h-fit">
+    <div className="my-8 flex flex-col justify-center items-center julius-sans-one-regular h-fit text-neutral-100">
       <h1 className=" mt-6 font-thin text-2xl translate-y-16">possum park studio</h1>
             
             <img className="w-4/5 max-w-md cover" src={possum} alt="mad possum illustration" draggable="false"/>
