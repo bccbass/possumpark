@@ -18,7 +18,7 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
   return (
     !isOpen && (
       <div className="flex flex-col items-center  mt-2 mb-8">
-        <div className="flex flex-row w-full items-center justify-center ">
+        <div className="flex flex-row w-48 items-center justify-around ">
           <img
             label="toPreviousSection"
             onClick={activeID != 0 ? handleDecrementId : null}

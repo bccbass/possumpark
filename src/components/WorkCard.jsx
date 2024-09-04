@@ -4,8 +4,15 @@ import VidPlayer from "./VidPlayer";
 import WorkCardInfo from "./WorkCardInfo";
 
 const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
+
+
   return (
-    <div className="w-full md:w-1/2 px-2">
+    <motion.div 
+    initial={{ opacity: 0}}
+    whileInView={{ opacity: 1}}
+    transition={{ delay: .1, duration:1}}
+    viewport={{ once: true }}
+    className="w-full md:w-1/2 px-2">
     <div className=" flex flex-col shadow-md mb-4 bg-white w-full">
       <h2 className="julius-sans-one-regular bg-cyan-900 w-full text-neutral-50 rounded-t-sm p-1.5">
         project: {project.title}
@@ -29,7 +36,7 @@ const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
         )}
       </AnimatePresence>
     </div>
-    </div>
+    </motion.div>
   );
 };
 
