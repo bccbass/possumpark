@@ -5,7 +5,7 @@ import WorkCardInfo from "./WorkCardInfo";
 
 const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
   return (
-    <div className="md:w-1/2 px-2">
+    <div className="w-full md:w-1/2 px-2">
     <div className=" flex flex-col shadow-md mb-4 bg-white w-full">
       <h2 className="julius-sans-one-regular bg-cyan-900 w-full text-neutral-50 rounded-t-sm p-1.5">
         project: {project.title}

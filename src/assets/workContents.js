@@ -10,6 +10,7 @@ const workContents = [
     description: "Commercial brief",
     role: "composer, instrumentalist, mixing, visuals",
     tags: ["lofi", "composer", "commercial", "chill"],
+    genres: ['commercial']
   },
   {
     title: "Innovation In a Minute",
@@ -17,8 +18,8 @@ const workContents = [
     img: cloudinaryPrefix + "afropopthumb",
     role: "composer, instrumentalist, mixing, visuals",
     description: "Commercial brief",
-
     tags: ["energetic", "composer", "commercial", "world"],
+    genres: ['commercial']
   },
   {
     title: "Amazing in Motion",
@@ -26,8 +27,8 @@ const workContents = [
     img: cloudinaryPrefix + "indiethumb",
     role: "composer, instrumentalist, mixing, visuals",
     description: "Commercial brief",
-
     tags: ["energetic", "composer", "commercial", "indie", "cover"],
+    genres: ['commercial']
   },
   {
     title: "Horizons of Energy",
@@ -36,6 +37,8 @@ const workContents = [
     description: "Commercial brief",
     role: "composer, instrumentalist, mixing, visuals",
     tags: ["orchestral", "composer", "commercial", "emotive"],
+    genres: ['commercial']
+
   },
   {
     title: "Power to Move",
@@ -44,6 +47,7 @@ const workContents = [
     description: "Commercial brief",
     role: "composer, instrumentalist, mixing, visuals",
     tags: ["highenergy", "composer", "commercial", "emotive"],
+    genres: ['commercial']
   },
   {
     title: "New York Lonely Boy",
@@ -51,8 +55,8 @@ const workContents = [
     img: cloudinaryPrefix + "lonelyboythumb",
     role: "upright bass, engineer",
     description: "Song from season 1 Girls5Eva, featuring the Milk Carton Kids",
-
     tags: ["television", "commercial", "indie"],
+    genres: ['television']
   },
   {
     title: "New York Moms",
@@ -60,8 +64,8 @@ const workContents = [
     img: cloudinaryPrefix + "momsthumb",
     role: "upright bass, engineer",
     description: "Song from season 2 of Girls5Eva, featuring Ingrid Michaelson",
-
     tags: ["television", "commercial", "indie"],
+    genres: ['television']
   },
   {
     title: "Drunkards Walk Pt. 1",
@@ -69,8 +73,8 @@ const workContents = [
     img: cloudinaryPrefix + "drunkardsthumb",
     role: "upright bass, production",
     description: "Assembly Trio (ft. Aaron Arntz, Christopher Bear) from album Russell St. Recordings",
-
     tags: ["television", "commercial", "indie"],
+    genres: ['jazz || experimental']
   },
   {
     title: "Doing",
@@ -78,8 +82,8 @@ const workContents = [
     img: cloudinaryPrefix + "doingthumb",
     role: "production, composer, instrumentalist, visuals",
     description: "Doing from album Kimono Dragon",
-
     tags: ["television", "commercial", "indie"],
+    genres: ['jazz || experimental']
   },
   {
     title: "O B F O L G B",
@@ -89,6 +93,8 @@ const workContents = [
     description: "O B F O L G B from album Kimono Dragon",
 
     tags: ["television", "commercial", "indie"],
+    genres: ['jazz || experimental', 'ambient || sound design']
+
   },
   {
     title: "Two Feet",
@@ -96,8 +102,8 @@ const workContents = [
     img: cloudinaryPrefix + "twofeetthumb",
     role: "production, composer, instrumentalist",
     description: "Inspired by the western works of Cormac McCarthy",
-
     tags: ["television", "commercial", "indie"],
+    genres: ['jazz || experimental']
   },
 ];
 
