@@ -14,7 +14,7 @@ const Section = ({ section, children }) => {
       initial={{ opacity: 0 }}
       animate={{ x: 0, opacity: 100 }}
       exit={{ opacity: 0 }}
-      className={`p-2 px-8 drop-shadow-lg flex flex-col items-center w-screen rounded-sm self-center md:mt-16 ${section.menuTitle == 'contact' ? 'max-w-xl' : 'max-w-4xl'}`}
+      className={`p-2 px-8 drop-shadow-lg flex flex-col items-center w-screen rounded-sm self-center md:mt-16 md:px-20 lg:px-0 ${section.menuTitle == 'contact' ? 'max-w-xl' : 'max-w-4xl'}`}
     >
       <div className="w-full max-w-3xl flex flex-col items-center mt-4  overflow-hidden">
         <div className=" flex flex-col w-full border rounded-tl-3xl overflow-hidden mb-7">

@@ -21,7 +21,7 @@ function App() {
         />
         <Body activeID={activeID} />
         <ArrowNav activeID={activeID} setActiveID={setActiveID} />
-        <Footer />
+          <Footer activeID={activeID} setActiveID={setActiveID} />
       </main>
     </>
   );

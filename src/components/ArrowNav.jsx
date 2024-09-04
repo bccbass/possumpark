@@ -11,32 +11,36 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
     activeID >= contentLength ? setActiveID(0) : setActiveID(activeID + 1);
   const handleDecrementId = () =>
     activeID == 0 ? setActiveID(contentLength) : setActiveID(activeID - 1);
-  const activeButton = "w-12 opacity-90 inline-block mx-6 hover:opacity-50 transition-opacity"
-  const inactiveButton = "w-12 opacity-0 inline-block mx-6"
-
+  const activeButton =
+    "w-12 opacity-90 inline-block mx-3 hover:opacity-50 transition-opacity";
+  const inactiveButton = "w-12 opacity-0 inline-block mx-6";
 
   return (
     !isOpen && (
       <div className="flex flex-col items-center  mt-2 mb-8">
-        <div className="">
-            <img
-              label="toPreviousSection"
-              onClick={activeID != 0 ? handleDecrementId : null}
-              className={`${activeID != 0 ? activeButton : inactiveButton} fixed left-6 top-1/2`}
-              src={leftArrow}
-              alt="left arrow"
-              draggable="false"
-            />
+        <div className="flex flex-row w-full items-center justify-center ">
+          <img
+            label="toPreviousSection"
+            onClick={activeID != 0 ? handleDecrementId : null}
+            className={`${
+              activeID != 0 ? activeButton : inactiveButton
+            } md:fixed left-1 lg:left-12 xl:left-48 2xl:left-80 md:top-1/2`}
+            src={leftArrow}
+            alt="left arrow"
+            draggable="false"
+          />
 
           {/* Right Arrow */}
-            <img
-              label="toNextSection"
-              onClick={activeID != contentLength ? handleIncrementId : null}
-              className={`${activeID != contentLength ? activeButton : inactiveButton} fixed right-6 top-1/2`}
-              src={rightArrow}
-              alt="right arrow"
-              draggable="false"
-            />
+          <img
+            label="toNextSection"
+            onClick={activeID != contentLength ? handleIncrementId : null}
+            className={`${
+              activeID != contentLength ? activeButton : inactiveButton
+            } md:fixed right-1 lg:right-12 xl:right-48 2xl:right-80 md:top-1/2`}
+            src={rightArrow}
+            alt="right arrow"
+            draggable="false"
+          />
         </div>
         {/* DOTS */}
         <div className="flex mt-2">
