@@ -3,17 +3,21 @@ import Tags from "./Tags";
 
 const WorkCardInfo = ({ project }) => {
   return (
-    <div className={`w-full h-auto  flex-col space-y-2 transition-all flex`}>
-      <article className="px-1.5">
+    <article className={`w-full h-auto py-2  flex-col space-y-1 transition-all flex`}>
+      <h2 className="px-1">
+        <span className="font-semibold"> Project: </span>
+        {project.title}
+      </h2>
+      <h2 className="px-1">
         <span className="font-semibold"> Description: </span>
         {project.description}
-      </article>
-      <h2 className="px-1.5">
+      </h2>
+      <h2 className="px-1">
         <span className="font-semibold" > Role: </span>
         {project.role}
       </h2>
       {/* <Tags tags={project.tags} /> */}
-    </div>
+    </article>
   );
 };
 

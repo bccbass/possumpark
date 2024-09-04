@@ -17,7 +17,7 @@ export const sectionContents = [
     heading: "work",
     menuTitle: "work",
     img: null,
-    body: "Below is a sampling of work created or assisted by Possum Park studios. Our aim is to showcase the breadth of style and projects we have worked on prevously, and to welcome future projects of all shapes, styles and sizes."
+    body: "Below is a sampling of work created or assisted by Possum Park Studio. Its aim is to showcase the breadth of style and projects we have worked on prevously, and to welcome future projects of all shapes, styles and sizes."
   },
 
   { ID: 3,

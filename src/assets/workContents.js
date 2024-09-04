@@ -50,6 +50,15 @@ const workContents = [
     genres: ['commercial']
   },
   {
+    title: "Two Feet",
+    videoID: `${videoPrefix}2feet.mov`,
+    img: cloudinaryPrefix + "2feetthumb",
+    role: "visuals, production, composer, instrumentalist",
+    description: "Inspired by the western works of Cormac McCarthy",
+    tags: ["television", "commercial", "indie"],
+    genres: ['jazz || experimental']
+  }, 
+  {
     title: "New York Lonely Boy",
     videoID: `${videoPrefix}lonelyboy.mov`,
     img: cloudinaryPrefix + "lonelyboythumb",
@@ -86,25 +95,51 @@ const workContents = [
     genres: ['jazz || experimental']
   },
   {
+    title: "Escape to Mañana",
+    videoID: `${videoPrefix}escape.mov`,
+    img: cloudinaryPrefix + "escapethumb",
+    role: "production, composer, instrumentalist",
+    description: "Escape to Mañana from album Kimono Dragon",
+    tags: ["television", "commercial", "indie"],
+    genres: ['jazz || experimental']
+  },
+  {
     title: "O B F O L G B",
     videoID: `${videoPrefix}obfolgb.mov`,
     img: cloudinaryPrefix + "obfolgbthumb",
     role: "production, composer, instrumentalist, visuals",
     description: "O B F O L G B from album Kimono Dragon",
-
     tags: ["television", "commercial", "indie"],
-    genres: ['jazz || experimental', 'ambient || sound design']
-
+    genres: ['ambient || sound design']
   },
   {
-    title: "Two Feet",
-    videoID: `${videoPrefix}twofeet.mov`,
-    img: cloudinaryPrefix + "twofeetthumb",
-    role: "production, composer, instrumentalist",
-    description: "Inspired by the western works of Cormac McCarthy",
+    title: "Imaginary Friends",
+    videoID: `${videoPrefix}imaginary.mov`,
+    img: cloudinaryPrefix + "imaginarythumb",
+    role: "production, composer, instrumentalist, mix, master",
+    description: "Upcoming release, featuring Phil Rodriguez (trumpet)",
     tags: ["television", "commercial", "indie"],
-    genres: ['jazz || experimental']
+    genres: ['ambient || sound design']
   },
+  {
+    title: "BATTAB",
+    videoID: `${videoPrefix}battab.mov`,
+    img: cloudinaryPrefix + "battabthumb",
+    role: "production, composer, instrumentalist",
+    description: "Teaser for upcoming release from band BATTAB",
+    tags: ["television", "commercial", "indie"],
+    genres: ['indie']
+  },
+  {
+    title: "My Midnight Heart",
+    videoID: `${videoPrefix}break.mov`,
+    img: cloudinaryPrefix + "breakthumb",
+    role: "production, arrangement, instrumentalist",
+    description: "Title track from My Midnght Hearts ep Break",
+    tags: ["television", "commercial", "indie"],
+    genres: ['indie']
+  },
+
 ];
 
 export default workContents;
