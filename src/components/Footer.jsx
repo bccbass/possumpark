@@ -4,13 +4,13 @@ import possum from "../assets/madpossumv2.png";
 
 const Footer = ({ activeID, setActiveID }) => {
   const homepageClasses = "bg-neutral-100 border-none";
-  const expandedFooterClasses = "bg-white= border-top";
+  const expandedFooterClasses = "bg-white border-top";
 
   return (
     <footer
       className={`${
         activeID == 0 ? homepageClasses : expandedFooterClasses
-      }font-light  text-xs text-gray-500 flex flex-col justify-end bg-white h-fit`}
+      }font-light  text-xs text-gray-500 flex flex-col justify-end h-fit`}
     >
       {activeID !== 0 && (
         <div className="flex  justify-between mx-2 items-center md:ml-8 lg:ml-16">

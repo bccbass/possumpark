@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <main className="flex flex-col min-h-screen justify-between h-fit">
+      <main className="flex flex-col min-h-screen justify-between h-fit" >
         <Nav
           isOpen={isOpen}
           setOpen={setOpen}
@@ -21,7 +21,7 @@ function App() {
         />
         <Body activeID={activeID} />
         <ArrowNav activeID={activeID} setActiveID={setActiveID} />
-          <Footer activeID={activeID} setActiveID={setActiveID} />
+        <Footer activeID={activeID} setActiveID={setActiveID} />
       </main>
     </>
   );

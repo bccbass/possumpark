@@ -23,10 +23,10 @@ const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
         <AnimatePresence>
           {project.videoID === isPlaying && (
             <motion.div
-              className="z-0 flex self-start ml-2 items-center"
-              initial={{ height: "0px", opacity: "50%" }}
-              animate={{ height: "auto", opacity: "100%" } }
-              exit={{ height: "0px", opacity: "0" }}
+              className="z-0 flex self-start items-center"
+              initial={{ height: "0px"}}
+              animate={{ height: "auto"}}
+              exit={{ height: "0px", y: '-100px' }}
             >
               <WorkCardInfo isPlaying={isPlaying} project={project} />
             </motion.div>

@@ -3,6 +3,7 @@ import Section from "./Section";
 import Welcome from "./Welcome.jsx";
 import Work from "./Work.jsx";
 import Contact from "./Contact.jsx";
+import ServicesMosaic from "./ServicesMosaic.jsx";
 import { sectionContents } from "../assets/sectionContents.js";
 
 const Body = ({ activeID }) => {
@@ -16,6 +17,7 @@ const Body = ({ activeID }) => {
             section.ID == activeID && (
               <Section key={section.ID} section={section}>
                 {section.menuTitle == "work" && <Work />}
+                {/* {section.menuTitle == "what we do" && <ServicesMosaic />} */}
                 {section.menuTitle == "contact" && <Contact />}
                 
               </Section>

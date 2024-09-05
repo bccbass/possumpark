@@ -3,7 +3,7 @@ import Tags from "./Tags";
 
 const WorkCardInfo = ({ project }) => {
   return (
-    <article className={`w-full h-auto py-2  flex-col space-y-1 transition-all flex text-gray-900 bg-neutral-50`}>
+    <article className={`w-full h-auto py-2 pl-2 flex-col space-y-1 transition-all flex text-gray-700  bg-neutral-50`}>
       <h2 className="px-1">
         <span className="font-semibold"> Project: </span>
         {project.title}

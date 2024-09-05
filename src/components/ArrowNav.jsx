@@ -17,7 +17,7 @@ const ArrowNav = ({ setActiveID, activeID, isOpen }) => {
 
   return (
     !isOpen && (
-      <div className="flex flex-col items-center  mt-2 mb-8">
+      <div className="flex flex-col items-center mt-2 mb-8 md:mb-16 lg:mb-24">
         <div className="flex flex-row w-48 items-center justify-around ">
           <img
             label="toPreviousSection"
