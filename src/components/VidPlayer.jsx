@@ -1,18 +1,26 @@
 import React from "react";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
+import {isMobile} from 'react-device-detect';
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 const VidPlayer = ({ project, isPlaying, setIsPlaying }) => {
   const vidRef = useRef(null);
-  useState(() => {
+  const smallScreen = useMediaQuery("only screen and (max-width : 768px)");
+
+  // Logic to allow user to click away from the video player and hide playing status/hide info card. MediaQuery set up to disable at smaller sizes.
+  useEffect(() => {
+    const screenSize = window.matchMedia("(max-width: 600px)");
     const handleEvent = (e) => {
-      const targetVid = vidRef.current
-      if (targetVid && !targetVid.contains(e.target)) {setIsPlaying(null)}
+      const targetVid = vidRef.current;
+      if (!smallScreen && !isMobile && targetVid && !targetVid.contains(e.target)) {
+        setIsPlaying(null);
+      }
     };
 
     document.addEventListener("pointerdown", handleEvent);
 
     return () => document.removeEventListener("pointerdown", handleEvent);
-  }, [isPlaying]);
+  }, [isPlaying, smallScreen]);
 
   return (
     <div className="">

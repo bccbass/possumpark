@@ -24,8 +24,8 @@ const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
           {project.videoID === isPlaying && (
             <motion.div
               className="z-0 flex self-start ml-2 items-center"
-              initial={{ height: "0px", opacity: "100%" }}
-              animate={{ height: "auto", opacity: "100%" }}
+              initial={{ height: "0px", opacity: "50%" }}
+              animate={{ height: "auto", opacity: "100%" } }
               exit={{ height: "0px", opacity: "0" }}
             >
               <WorkCardInfo isPlaying={isPlaying} project={project} />
