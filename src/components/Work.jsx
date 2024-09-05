@@ -24,7 +24,7 @@ const Work = () => {
              whileInView={{ opacity: 1}}
              transition={{ delay: .1, duration:1}}
              viewport={{ once: true }}
-            className="julius-sans-one-regular text-xl md:text-2xl text-neutral-100 p-2 my-2">
+            className="julius-sans-one-regular text-2xl lg:text-3xl lg:mt-6 text-gray-700 p-2 my-2">
               {genre}
             </motion.h2>
             <div className="flex flex-wrap w-full">

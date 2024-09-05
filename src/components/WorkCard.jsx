@@ -8,7 +8,7 @@ const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.1, duration: 1 }}
+      transition={{ delay: Math.random()/3, duration: 1 }}
       viewport={{ once: true }}
       className="w-full md:w-1/2 px-2"
     >
@@ -24,8 +24,8 @@ const WorkCard = ({ project, isPlaying, setIsPlaying }) => {
           {project.videoID === isPlaying && (
             <motion.div
               className="z-0 flex self-start ml-2 items-center"
-              initial={{ height: "0px", opacity: "1" }}
-              animate={{ height: "auto", opacity: "1" }}
+              initial={{ height: "0px", opacity: "100%" }}
+              animate={{ height: "auto", opacity: "100%" }}
               exit={{ height: "0px", opacity: "0" }}
             >
               <WorkCardInfo isPlaying={isPlaying} project={project} />

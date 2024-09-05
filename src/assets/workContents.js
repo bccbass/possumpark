@@ -40,15 +40,15 @@ const workContents = [
     genres: ['commercial']
 
   },
-  {
-    title: "Power to Move",
-    videoID: `${videoPrefix}highenergy.mov`,
-    img: cloudinaryPrefix + "highenergythumb",
-    description: "Commercial brief",
-    role: "composer, instrumentalist, mixing, visuals",
-    tags: ["highenergy", "composer", "commercial", "emotive"],
-    genres: ['commercial']
-  },
+  // {
+  //   title: "Power to Move",
+  //   videoID: `${videoPrefix}highenergy.mov`,
+  //   img: cloudinaryPrefix + "highenergythumb",
+  //   description: "Commercial brief",
+  //   role: "composer, instrumentalist, mixing, visuals",
+  //   tags: ["highenergy", "composer", "commercial", "emotive"],
+  //   genres: ['commercial']
+  // },
   {
     title: "Two Feet",
     videoID: `${videoPrefix}2feet.mov`,

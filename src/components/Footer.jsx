@@ -1,5 +1,4 @@
 import React from "react";
-import Badge from "./Badge";
 import { sectionContents } from "../assets/sectionContents";
 import possum from "../assets/madpossumv2.png";
 
@@ -14,10 +13,9 @@ const Footer = ({ activeID, setActiveID }) => {
       }font-light  text-xs text-gray-500 flex flex-col justify-end bg-white h-fit`}
     >
       {activeID !== 0 && (
-        <div className="flex  justify-between mx-2 mt-1 items-center">
-          {/* <Badge /> */}
+        <div className="flex  justify-between mx-2 items-center md:ml-8 lg:ml-16">
           <h3
-            className="w-20 julius-sans-one-regular mx-3  flex flex-col text-center translate-y-2"
+            className="w-20 julius-sans-one-regular mx-3  flex flex-col text-center text-gray-700"
             style={{ fontSize: ".6rem" }}
           >
             Designed and coded by Possum Park
@@ -28,14 +26,14 @@ const Footer = ({ activeID, setActiveID }) => {
             alt=""
           />
 
-          <div className="flex flex-col w-fit  items-end mx-3 mt-1">
+          <div className="flex flex-col w-fit  items-end mx-3 mt-2 md:mr-3 lg:mr-10">
             <span className="font-semibold">sitemap </span>
-            <ul className="flex flex-col items-end">
+            <ul className="flex flex-col items-end ">
               {sectionContents.map((section) => (
                 <li
                   onClick={() => setActiveID(section.ID)}
                   key={section.ID}
-                  className="list-none hover:underline hover:text-gray-800 transition-all cursor-default"
+                  className="list-none hover:underline hover:text-gray-800 transition-all cursor-default my-0.5"
                 >
                   {section.menuTitle}
                 </li>

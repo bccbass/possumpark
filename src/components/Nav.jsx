@@ -11,7 +11,7 @@ function Nav({ isOpen, setOpen, activeID, setActiveID }) {
       {activeID > 0 && !isOpen && (
         <div
           onClick={() => setActiveID(0)}
-          className="flex items-center ml-6 py-2"
+          className="flex items-center ml-6 py-3"
         >
           <img
             draggable="false"
