@@ -16,7 +16,7 @@ const ServicesMosaic = () => {
     "bands",
   ];
   return (
-    <figure className="flex flex-wrap w-full my-4">
+    <figure className="flex flex-wrap w-full">
       {/* {services.map((service, i) => (
         <div className="flex bg-inherit h-24 w-1/3">
           <div

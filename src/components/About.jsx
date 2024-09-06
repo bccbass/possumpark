@@ -2,46 +2,24 @@ import React from "react";
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { sectionContents } from "../assets/sectionContents.js";
+import synths from '../assets/synths.webp'
 
 const About = () => {
     const section = sectionContents[1]
-    const sectionRef = useRef(null);
-    useEffect(() => {
-      sectionRef.current.scrollIntoView();
-    }, []); 
+
   return (
     <motion.div
-    ref={sectionRef}
-    initial={{ opacity: 0 }}
-    animate={{ x: 0, opacity: 100 }}
-    exit={{ opacity: 0 }}
-    className={`p-2 px-8 drop-shadow-md flex flex-col items-center w-screen  self-center md:mt-16 md:px-20 lg:px-0 ${
-      section.menuTitle == "contact" ? "max-w-xl" : "max-w-4xl"
-    }`}
+    className=""
   >
-    <div className="w-full max-w-3xl flex flex-col items-center mt-4 rounded-t overflow-hidden ">
-      <h2 className=" text-neutral-100 uppercase bg-red-600 opacity-95 max-w-3xl w-full mx-24 julius-sans-one-regular  py-1 px-4  text-6xl font-bold text-center absolute z-20 ">
-        {section.heading}
-      </h2>
-      <div className=" flex flex-col md:flex-row w-full overflow-hidden">
-        {section.img && (
-          <img
-            className={`saturate-150 w-full sm:h-96 object-cover rounded-b ${
-              section.body && "md:w-2/5 lg:w-1/2 md:h-inherit"
-            }`}
-            src={section.img}
-            alt=""
-          />
-        )}
-        {section.body && (
-          <div className="flex justify-end flex-col bg-neutral-50 pt-40 ">
-            <div className="bg-neutral-50 p-3 text-justify md:py-4 ">
-              {section.body}
-            </div>
-          </div>
-        )}
-      </div>
+    {/* <div className="w-full  h-16 bg-red-400"></div> */}
+    <div className="mt-16 translate-y-8 bg-red-500 w-full h-16 self-end opacity-95"><div className="bg-neutral-50 h-full w-fit ml-96 -skew-x-12 flex  items-center"><h2 className="julius-sans-one-regular px-4 text-red-700 text-4xl skew-x-12">who we are</h2></div></div>
+    <div className="" style={{display: 'flow-root'}}>
+      <img src={synths} className="saturate-150 w-1/2" alt="" style={{shapeMargin: '.5rem', shapeOutside: 'polygon(0% 0%, 74.19% 2.09%, 80.16% 19.14%, 58.97% 46.59%, 100% 61.71%, 99.73% 71.86%, 87.76% 100.08%, 0% 100%)', float: "left"}}/>
+      {/* <img src={synths} className="w-1/2" alt="" style={{shapeMargin: '.5rem', shapeOutside: 'url(../assets/synths.webp', float: "left"}}/> */}
+      <article className="mt-16 text-justify ">{section.body}</article>
     </div>
+    <div className="mt-16 mb-8 bg-red-500 w-full h-16 self-end opacity-95"><div className="bg-neutral-50 h-full w-fit ml-16 -skew-x-12 flex  items-center"><h2 className="julius-sans-one-regular px-4 text-red-700 text-4xl skew-x-12">what we do</h2></div></div>
+    
   </motion.div>
   )
 }
