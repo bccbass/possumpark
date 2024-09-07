@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "./Section";
-import About from "./About.jsx";
+import WhatWeDo from "./WhatWeDo.jsx";
 import Welcome from "./Welcome.jsx";
 import Work from "./Work.jsx";
 import Contact from "./Contact.jsx";
@@ -18,8 +18,8 @@ const Body = ({ activeID }) => {
             section.ID == activeID && (
               <Section key={section.ID} section={section}>
                 {section.menuTitle == "work" && <Work/>}
-                {/* {section.menuTitle == "what we do" && <About section={section}/>} */}
-                {section.menuTitle == "what we do" && <ServicesMosaic />}
+                {section.menuTitle == "who we are" && <WhatWeDo section={section}/>}
+                {/* {section.menuTitle == "who we are" && <ServicesMosaic />} */}
 
                 {section.menuTitle == "contact" && <Contact />}
                 

@@ -6,8 +6,9 @@ import possum from "../assets/madpossumv2.png";
 function Nav({ isOpen, setOpen, activeID, setActiveID }) {
   // const handleNavToggle = () => setOpen(!isOpen);
 
+
   return (
-    <div className="w-screen flex flex-row justify-between z-20 border-b bg-white">
+    <div className="w-screen flex flex-row justify-between z-50 border-b bg-white">
       {activeID > 0 && !isOpen && (
         <div
           onClick={() => setActiveID(0)}
@@ -40,7 +41,7 @@ function Nav({ isOpen, setOpen, activeID, setActiveID }) {
         />
       </div>
       {isOpen && (
-        <Menu setOpen={setOpen} setActiveID={setActiveID} activeID={activeID} />
+        <Menu setOpen={setOpen} isOpen={isOpen} setActiveID={setActiveID} activeID={activeID} />
       )}
     </div>
   );

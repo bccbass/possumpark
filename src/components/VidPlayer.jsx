@@ -49,7 +49,7 @@ const VidPlayer = ({ project, isPlaying, setIsPlaying }) => {
               ></video>
             </div>
           ) : (
-            <div className="z-20">
+            <div className="">
               <img
                 onClick={() => setIsPlaying(project.videoID)}
                 src={project.img}
