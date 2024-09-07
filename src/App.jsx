@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <main className="flex flex-col min-h-screen justify-between h-fit max-w-screen" >
+      <main className="flex flex-col min-h-screen justify-between h-fit overflow-x-hidden" draggable='false'>
         <Nav
           isOpen={isOpen}
           setOpen={setOpen}

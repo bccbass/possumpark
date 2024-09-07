@@ -28,7 +28,7 @@ const Work = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.1, duration: 1 }}
                 viewport={{ once: true }}
-                className="julius-sans-one-regular text-2xl lg:text-3xl text-gray-700 p-2 my-2"
+                className="julius-sans-one-regular text-2xl lg:text-3xl text-gray-700 p-2 "
               >
                 {genre}
               </motion.h2>

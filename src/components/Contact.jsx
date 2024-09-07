@@ -32,7 +32,6 @@ const Contact = () => {
     },
   });
 
-
   return (
     <div className="flex flex-col items-center justify-center h-54 bg-neutral-50 border w-full max-w-xl mb-12">
       {!isSuccess && (
@@ -89,11 +88,13 @@ const Contact = () => {
             times: [0, 0.2, 0.5, 0.8, 1],
             repeatDelay: 1,
           }}
-          className="flex flex-col items-center  w-full h-full bg-red-600 py-16 "
+          className="flex flex-col items-center bg-red-500 "
         >
-          <h2 className="text-2xl p-2 m-16 text-neutral-100 julius-sans-one-regular">
-            {result}
-          </h2>
+          <div className="flex flex-col items-center border border-neutral-50 m-4 py-10 ">
+            <h2 className="text-2xl w-full text-center p-2 m-16 text-neutral-100 julius-sans-one-regular">
+              {result}
+            </h2>
+          </div>
         </motion.div>
       )}
     </div>
