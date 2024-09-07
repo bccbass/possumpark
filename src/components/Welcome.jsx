@@ -1,9 +1,15 @@
 import React from "react";
+import { useRef, useEffect } from "react";
 import possum from "../assets/madpossumv2.png";
 
 function Welcome() {
+  const ref = useRef(null)
+    useEffect(() => {
+    ref.current.scrollIntoView();
+  }, []);
+
   return (
-    <div className="my-8 flex flex-col justify-center items-center julius-sans-one-regular h-fit text-gray-900">
+    <div ref={ref} className="my-8 flex flex-col justify-center items-center julius-sans-one-regular h-fit text-gray-900">
       <h1 className=" mt-6 font-thin text-2xl md:text-3xl translate-y-16">possum park studio</h1>
             
             <img className="w-4/5 max-w-md cover" src={possum} alt="mad possum illustration" draggable="false"/>
