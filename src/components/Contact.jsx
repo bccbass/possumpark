@@ -32,6 +32,7 @@ const Contact = () => {
     },
   });
 
+
   return (
     <div className="flex flex-col items-center justify-center h-54 bg-neutral-50 border w-full max-w-xl mb-12">
       {!isSuccess && (
@@ -67,45 +68,34 @@ const Contact = () => {
         </form>
       )}
 
-      {
-        isSuccess &&
+      {/* SENDING PROGRESS CARD */}
+      {/* {isClicked && (
+        <div className="flex flex-col items-center  w-full h-full bg-red-600 py-16 text-neutral-100">
+          <h2 className="julius-sans-one-regular text-2xl animate-pulse p-2 m-16">
+            Sending message...
+          </h2>
+        </div>
+      )} */}
+
+      {isSuccess && (
         <motion.div
-          
           animate={{
-            scale: [0, 1, 1, .95, 1],
-            borderRadius: ["100%", "0%", "0%", "0%", "0%"]
+            scale: [0, 1, 1, 0.95, 1],
+            borderRadius: ["100%", "0%", "0%", "0%", "0%"],
           }}
           transition={{
             duration: 2,
             ease: "easeInOut",
             times: [0, 0.2, 0.5, 0.8, 1],
-            repeatDelay: 1
+            repeatDelay: 1,
           }}
-          className="flex flex-col items-center  w-full h-full bg-red-500 py-16 "
+          className="flex flex-col items-center  w-full h-full bg-red-600 py-16 "
         >
-          <div className="flex pt-6">
-            <motion.div
-              animate={{
-                rotate: [0, 0, 30, -30, 0],
-                y: [0, -20, -5, -10, 0],
-                x: [2, -2, -5, -10, 2],
-              }}
-              transition={{
-                duration: 3,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.7, 0.9],
-                repeat: Infinity,
-              }}
-              className="text-center mt-4"
-            >
-              <img className="w-14" src={possum} alt="" />
-            </motion.div>
-          </div>
-          <h2 className="text-2xl p-2 mb-16 text-neutral-100 julius-sans-one-regular">
+          <h2 className="text-2xl p-2 m-16 text-neutral-100 julius-sans-one-regular">
             {result}
           </h2>
         </motion.div>
-      }
+      )}
     </div>
   );
 };
