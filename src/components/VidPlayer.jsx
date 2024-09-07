@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import Header from "./Banner";
 
 const VidPlayer = ({ project, isPlaying, setIsPlaying }) => {
   const vidRef = useRef(null);

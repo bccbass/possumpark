@@ -1,27 +1,27 @@
 import React from "react";
-import { useRef, useEffect } from "react";
-import { motion } from "framer-motion";
-import { sectionContents } from "../assets/sectionContents.js";
-import synths from '../assets/synths.webp'
+import Banner from "./Banner.jsx";
 
-const About = () => {
-    const section = sectionContents[1]
-
+const About = ({ section }) => {
   return (
-    <motion.div
-    className=""
-  >
-    {/* <div className="w-full  h-16 bg-red-400"></div> */}
-    <div className="mt-16 translate-y-8 bg-red-500 w-full h-16 self-end opacity-95"><div className="bg-neutral-50 h-full w-fit ml-96 -skew-x-12 flex  items-center"><h2 className="julius-sans-one-regular px-4 text-red-700 text-4xl skew-x-12">who we are</h2></div></div>
-    <div className="" style={{display: 'flow-root'}}>
-      <img src={synths} className="saturate-150 w-1/2" alt="" style={{shapeMargin: '.5rem', shapeOutside: 'polygon(0% 0%, 74.19% 2.09%, 80.16% 19.14%, 58.97% 46.59%, 100% 61.71%, 99.73% 71.86%, 87.76% 100.08%, 0% 100%)', float: "left"}}/>
-      {/* <img src={synths} className="w-1/2" alt="" style={{shapeMargin: '.5rem', shapeOutside: 'url(../assets/synths.webp', float: "left"}}/> */}
-      <article className="mt-16 text-justify ">{section.body}</article>
-    </div>
-    <div className="mt-16 mb-8 bg-red-500 w-full h-16 self-end opacity-95"><div className="bg-neutral-50 h-full w-fit ml-16 -skew-x-12 flex  items-center"><h2 className="julius-sans-one-regular px-4 text-red-700 text-4xl skew-x-12">what we do</h2></div></div>
-    
-  </motion.div>
-  )
-}
+    <div className="w-full max-w-3xl flex flex-col items-center mt-4  overflow-hidden">
+      <Banner header={section.heading} />
+      <div className="flex flex-col md:flex-row w-full overflow-hidden my-4 md:my-8">
 
-export default About
+        <img
+          className={`saturate-150 border w-full sm:h-96 object-cover p-1  ${
+            section.body && "md:w-2/5 lg:w-1/2 md:h-inherit"
+          }`}
+          src={section.img}
+          alt=""
+        />
+   
+        <div className="bg-neutral-50 px-4 py-6 md:py-2 md:ml-8 text-justify flex flex-col items-center justify-center">
+          <div>{section.body}</div>
+          <div className=" w-1/2 sm:w-3/5  h-1 border-b-2 border-gray-500 rounded-sm  mt-8 md:mt-4"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;

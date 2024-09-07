@@ -135,7 +135,7 @@ const workContents = [
     videoID: `${videoPrefix}break.mov`,
     img: cloudinaryPrefix + "breakthumb",
     role: "production, arrangement, instrumentalist",
-    description: "Title track from My Midnght Hearts ep Break",
+    description: "Title track Break EP",
     tags: ["television", "commercial", "indie"],
     genres: ['indie']
   },

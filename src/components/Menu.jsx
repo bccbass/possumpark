@@ -15,7 +15,7 @@ const Menu = ({ setOpen, setActiveID, activeID }) => {
       transition={{}}
       className="z-10 bg-red-400  fixed h-screen flex flex-col items-center w-full"
     >
-      <div className="flex flex-col items-center justify-between h-1/2 my-20 text-3xl text-slate-100 font-light">
+      <div className="flex flex-col items-center justify-between h-1/2 my-20 text-3xl text-slate-100 font-light cursor-default">
         {sectionContents.map((section) => (
           <span
             className={activeID == section.ID && "underline underline-offset-8"}

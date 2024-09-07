@@ -17,9 +17,9 @@ const Body = ({ activeID }) => {
           (section) =>
             section.ID == activeID && (
               <Section key={section.ID} section={section}>
-                {section.menuTitle == "work" && <Work />}
-                {/* {section.menuTitle == "what we do" && <About />} */}
-                {/* {section.menuTitle == "what we do" && <ServicesMosaic />} */}
+                {section.menuTitle == "work" && <Work/>}
+                {/* {section.menuTitle == "what we do" && <About section={section}/>} */}
+                {section.menuTitle == "what we do" && <ServicesMosaic />}
 
                 {section.menuTitle == "contact" && <Contact />}
                 
